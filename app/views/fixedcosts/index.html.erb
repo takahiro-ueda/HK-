@@ -18,8 +18,8 @@
         <td><%= fixedcost.name %></td>
         <td><%= fixedcost.description %></td>
         <td>
-          <%= link_to "編集", [:edit,fixedcost] %>
-          <%= link_to "削除", fixedcost, method: :delete, data: { confirm: "本当に削除してもよろしいでしょうか？"　%>
+        <%= link_to "編集", [:edit,fixedcost] %>
+        <%= link_to "削除", fixedcost, method: :delete, data: { confirm: "本当に削除してもよろしいでしょうか？"} %>
         </td>
       </tr>
     <% end %>

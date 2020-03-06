@@ -1,24 +1,24 @@
 class FixedcostsController < ApplicationController
 
   def index
-    @fixedcosts = Fixedcosts.order(created_at: :asc)
+    @fixedcosts = Fixedcost.order(created_at: :asc)
   end
 
   def show
-    @fixedcosts = Fixedcosts.find(params[:id])
+    @fixedcost = Fixedcost.find(params[:id])
   end
 
   def new
-    @fixedcosts = Fixedcosts.new()
+    @fixedcost = Fixedcost.new()
   end
 
   def edit
-    @fixedcosts = Fixedcosts.find(params[:id])
+    @fixedcost = Fixedcost.find(params[:id])
   end
 
   def create
-    @fixedcosts = Fixedcosts.new(params[:fixedcosts])
-    if @fixedcosts.save
+    @fixedcost = Fixedcost.new(params[:fixedcosts])
+    if @fixedcost.save
       redirect_to @fixedcost, notice: "固定費科目を登録しました"
     else
       render "new"
@@ -26,8 +26,8 @@ class FixedcostsController < ApplicationController
   end
 
   def update
-    @fixedcosts = Fixedcost.find([:id])
-    @fixedcosts.assign_attributes(params[:fixedcosts])
+    @fixedcost = Fixedcost.find([:id])
+    @fixedcost.assign_attributes(params[:fixedcost])
     if @fixedcost.save
       redirect_to @fixedcost, notice: "固定費科目を登録しました"
     else
