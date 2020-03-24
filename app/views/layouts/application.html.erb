@@ -10,11 +10,10 @@
   </head>
 
   <body>
+    
+    <%= link_to "新規登録", "#", class: 'icon__new' %>
 
-    <% if flash.notice %>
-      <%= flash.notice %>
-    <% end %>
-
-    <%= yield %>
+      <%= yield %>
+    
   </body>
 </html>
